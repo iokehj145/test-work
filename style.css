@@ -83,6 +83,7 @@ h1 {
     transition-duration: 500ms;
 }
 ul li {
+    position: relative;
     margin-top: 3vh;
     padding: 1% 1% 1% 5%;
     list-style: none;
@@ -91,25 +92,49 @@ ul li {
     font-size: 3vh;
     transition-duration: 500ms;
     border-radius: 100px;
-    border: 2px solid rgba(29, 45, 40, 0)
+    border: 2px solid rgba(29, 45, 40, 0);
+    z-index: 1;
 }
+
 ul li:before {
     content: "";
     position: absolute;
     left: 1vw;
     width: 0.8em;
     height: 0.8em;
-    margin-top: 0.5vh;
-    margin-left: 1.6vw;
+    margin-top: 0.8vh;
+    margin-left: -0.4vw;
     transition-duration: 500ms;
     background-size:cover;
     background-position:center;
+}
+ul li span {
+   position: absolute;
+   font-size: 2ch;
+   text-align: center;
+   text-justify: distribute;
+   border: 1px solid rgba(0,0,0,0);
+   border-radius: 100px;
+   left: 40.6vw;
+   width: 1em;
+   height: 1.3em;
+   color:#555;
+   z-index: 3;
+   transition-duration: 500ms;
+}
+ul li span:hover {
+    background-color: #999;
+    border: 1px solid rgba(55,55,55,1);
 }
 ul li:not(.checked)::before {
     background-image: url("comp/uncheck.webp");
 }
 ul li.checked::before {
     background-image: url("comp/checked.webp");
+}
+ul li.checked {
+    text-decoration: line-through black;
+    color:#9c9c9c;
 }
 ul li:hover {
     border: 2px solid rgb(29, 45, 40);
