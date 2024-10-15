@@ -110,7 +110,7 @@ ul li:before {
 }
 ul li span {
    position: absolute;
-   font-size: 2ch;
+   font-size: 1.5ch;
    text-align: center;
    text-justify: distribute;
    border: 1px solid rgba(0,0,0,0);
