@@ -1,8 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+/* Theme switcher */
+.nav {
+    z-index: 100;
+    position: fixed;
+}
+.Theme_container {
+    position: fixed;
+    bottom: 1vh;
+    right: 10px;
+    height: 2em;
+    width: 2em;
+    background-image: url('comp/theme.svg');
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.All_theme {
+    pointer-events: none;
+    opacity: 0;
+    display: flex;
+    position: fixed;
+    bottom: 1vh;
+    right: 10px;
+    height: 2.5em;
+    width: 2em;
+    background-color:#fff;
+    border: #000 1px solid;
+    border-radius: 100px;
+    z-index: -1;
+    justify-content: space-evenly;
+    align-items: center;
+    transition-duration: 250ms;
+}
+.active {
+    width: 10vw;
+    pointer-events: all;
+    opacity: 1;
+    z-index: 100;
+    bottom: 6vh;
+    right: 10px;
+}
+.All_theme div {
+    height: 2em;
+    width: 2em;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 100px;
+    box-shadow: #000 1px 1px 4px;
+    cursor: pointer;
+}
+.All_theme div svg {
+    height: 2em;
+    width: 2em;
+}
+.Theme_1 {
+    background-color:#000;
+    fill:#fff;
+}
+.Theme_2 {
+    background-color:#000;
+    fill:#95dfc9;
+}
+.Theme_3 {
+    background-color:#000;
+    fill:#358c36;
+}
+.Theme_4 {
+    background-color:#000;
+    fill:#f7d32f;
 }
 body{
     font-family: "Inter", sans-serif;
@@ -22,6 +96,8 @@ h1 {
     border-radius: 30px;
     margin-right: 40vw;
     margin-left: 10vw;
+    box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.5);
+
 }
 .make-new {
     display: flex;
@@ -30,8 +106,9 @@ h1 {
     padding-bottom: 1vh;
     margin-right: 30vw;
     padding-right: 5vh;
-    background-color: rgb(159, 201, 162);
+    background-color: transparent;
     border-radius: 30px;
+    outline: none;
 }
 #input {
     border-radius: 100px;
@@ -39,19 +116,13 @@ h1 {
     height: 5vh;
     width: 90%;
     padding: 2% 12% 2% 2%;
+    background-color: #d6d6d6;
     outline: none;
 }
-/* #input2 {
-    color: #000;
-    font-size: 5vh;
-    background-color: #bff7c6;
-    border-radius: 100px;
-    border: none;
-    height: 5vh;
-    width: 25%;
-    padding: 2% 2% 2% 2%;
-    outline: none;
-} */
+#input::placeholder {
+    color: #555;
+}
+
 .add-button{
     position: absolute;
     right: 35vw;
@@ -63,6 +134,7 @@ h1 {
     margin-left: 1%;
     background-color: #36a019;
     transition-duration: 500ms;
+    font-size: 2vh;
 }
 .add-button:hover{
     background-color: #000;
@@ -81,6 +153,8 @@ h1 {
     padding-bottom: 2vh;
     padding-right: 5vh;
     transition-duration: 500ms;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+
 }
 ul li {
     position: relative;
@@ -138,6 +212,8 @@ ul li.checked {
 }
 ul li:hover {
     border: 2px solid rgb(29, 45, 40);
+    box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.5);
+
 }
 ul li:active {
     background-color: #000;
