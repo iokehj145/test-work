@@ -30,8 +30,6 @@
     position: fixed;
     bottom: 1vh;
     right: 10px;
-    height: 2.5em;
-    width: 2em;
     background-color:#fff;
     border: #000 1px solid;
     border-radius: 100px;
@@ -41,7 +39,6 @@
     transition-duration: 250ms;
 }
 .active {
-    width: 10vw;
     pointer-events: all;
     opacity: 1;
     z-index: 100;
@@ -49,8 +46,6 @@
     right: 10px;
 }
 .All_theme div {
-    height: 2em;
-    width: 2em;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -58,9 +53,122 @@
     box-shadow: #000 1px 1px 4px;
     cursor: pointer;
 }
-.All_theme div svg {
-    height: 2em;
-    width: 2em;
+@media (min-width: 1000px) {
+    .All_theme {
+        height: 2.5em;
+        width: 2em;
+    }
+    .active {
+        width: 10vw;
+    }
+    .All_theme div {
+        height: 2em;
+        width: 2em;
+        
+    }
+    .All_theme div svg {
+        height: 2em;
+        width: 2em;
+    }
+    body {
+        margin-left: 25%;
+    }
+    h1 {
+        margin-right: 40vw;
+        margin-left: 10vw;
+    }
+    #input {
+        height: 5vh;
+        width: 90%;
+        padding: 2% 12% 2% 2%;
+    }
+    .make-new {
+        padding-left: 2vw;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        padding-right: 5vh;
+        margin-right: 30vw;
+    }
+    .add-button {
+        height: 5vh;
+        width: 8%;
+        right: 35vw;
+    }
+    #list {
+        margin-right: 30vw;
+        box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+        padding-right: 10vh;
+        padding-left: 2vh;
+        padding-top: 1vh;
+        padding-bottom: 2vh;
+    }
+    ul li span {
+        right: -3vw;
+        width: 1em;
+        height: 1.3em;
+    }
+    ul li {
+        padding: 1% 1% 1% 5%;
+    }
+}
+@media (max-width: 1000px) {
+    .All_theme {
+        height: 1.5em;
+        width: 1em;
+    }
+    .active {
+        height: 2em;
+        width: 35vw;
+    }
+    .All_theme div {
+        height: 2em;
+        width: 2em;
+        
+    }
+    .All_theme div svg {
+        height: 2em;
+        width: 2em;
+    }
+    body {
+        margin-left: 10%;
+    }
+    h1 {
+        margin-right: 10vw;
+    }
+    #input {
+        height: 5vh;
+        width: 90%;
+        padding: 2% 15% 2% 2%;
+    }
+    .make-new {
+        padding-left: 0vw;
+        padding-top: 1vh;
+        padding-bottom: 0vh;
+        padding-right: 0vh;
+        margin-right: 2vw;
+    }
+    .add-button {
+        height: 5vh;
+        width: 20%;
+        right: 5vw;
+    }
+    #list {
+        margin-right: 5vw;
+        box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.5);
+        padding-right: 5vh;
+        padding-left: 2vh;
+        padding-top: 1vh;
+        padding-bottom: 2vh;
+    }
+    ul li span{
+        right: -7vw;
+        width: 1em;
+        height: 1.3em;
+    }
+    ul li {
+        padding: 1% 1% 1% 10%;
+    }
+
 }
 .Theme_1 {
     background-color:#000;
@@ -82,7 +190,6 @@ body{
     font-family: "Inter", sans-serif;
     background: #fff;
     position: relative;
-    margin-left: 25%;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -94,18 +201,11 @@ h1 {
     background-color:rgb(149, 223, 201);
     padding: 1vh;
     border-radius: 30px;
-    margin-right: 40vw;
-    margin-left: 10vw;
     box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.5);
 
 }
 .make-new {
     display: flex;
-    padding-left: 2vw;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    margin-right: 30vw;
-    padding-right: 5vh;
     background-color: transparent;
     border-radius: 30px;
     outline: none;
@@ -113,9 +213,6 @@ h1 {
 #input {
     border-radius: 100px;
     border: none;
-    height: 5vh;
-    width: 90%;
-    padding: 2% 12% 2% 2%;
     background-color: #d6d6d6;
     outline: none;
 }
@@ -125,12 +222,9 @@ h1 {
 
 .add-button{
     position: absolute;
-    right: 35vw;
     cursor: pointer;
     border-radius: 30px;
     border: none;
-    height: 5vh;
-    width: 8%;
     margin-left: 1%;
     background-color: #36a019;
     transition-duration: 500ms;
@@ -142,24 +236,16 @@ h1 {
 }
 #list {
     display: flex;
-    padding: 10vh;
     background-color: rgb(149, 223, 201);
     border-radius: 30px;
-    margin-right: 30vw;
     margin-top: 1vh;
     flex-direction: column;
-    padding-left: 2vw;
-    padding-top: 1vh;
-    padding-bottom: 2vh;
-    padding-right: 5vh;
     transition-duration: 500ms;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
-
 }
 ul li {
     position: relative;
     margin-top: 3vh;
-    padding: 1% 1% 1% 5%;
     list-style: none;
     cursor:pointer;
     user-select: none;
@@ -189,9 +275,6 @@ ul li span {
    text-justify: distribute;
    border: 1px solid rgba(0,0,0,0);
    border-radius: 100px;
-   left: 40.6vw;
-   width: 1em;
-   height: 1.3em;
    color:#555;
    z-index: 3;
    transition-duration: 500ms;
