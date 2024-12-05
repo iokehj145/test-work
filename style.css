@@ -92,7 +92,7 @@
     .add-button {
         height: 5vh;
         width: 8%;
-        right: 35vw;
+        right: 33vw;
     }
     #list {
         margin-right: 30vw;
@@ -109,6 +109,10 @@
     }
     ul li {
         padding: 1% 1% 1% 5%;
+    }
+    #datetimeInput{
+        width: 20%;
+        margin-left: 19%;
     }
 }
 @media (max-width: 1000px) {
@@ -144,13 +148,13 @@
         padding-left: 0vw;
         padding-top: 1vh;
         padding-bottom: 0vh;
-        padding-right: 0vh;
-        margin-right: 2vw;
+        padding-right: -1vh;
+        margin-right: 8vw;
     }
     .add-button {
         height: 5vh;
         width: 20%;
-        right: 5vw;
+        right: 1vw;
     }
     #list {
         margin-right: 5vw;
@@ -168,7 +172,10 @@
     ul li {
         padding: 1% 1% 1% 10%;
     }
-
+    #datetimeInput{
+        width: 50%;
+        margin-left: 20%;
+    }
 }
 .Theme_1 {
     background-color:#000;
@@ -304,4 +311,19 @@ ul li:active {
 }
 ul li:active:before {
     filter: invert(100%)
+}
+#datetimeInput {
+    position: relative;
+    margin-top: 1vh;
+    padding: 1vh;
+    border: transparent solid 2px;
+    border-radius: 1em;
+    color: #000;
+    background-color: rgb(149, 223, 201);
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4);
+}
+#Time:hover {
+    fill: rgb(31, 25, 59);
+    transition: 400ms;
+    cursor: pointer;
 }

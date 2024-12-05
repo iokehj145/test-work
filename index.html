@@ -21,14 +21,14 @@
     </nav>
     <h1 id="Text" type="visiable" >To-do list</h1>
     <div class="make-new">
+        <svg onclick="toggleTime()" id="Time" width="25" height="25" style="align-self: center; margin-right: 5px" fill="rgb(18, 168, 105)" version="1.1" viewBox="0 0 459 459" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+        <g id="XMLID_188_"><path d="m229.5 0c-126.75 0-229.5 102.75-229.5 229.5s102.75 229.5 229.5 229.5 229.5-102.75 229.5-229.5-102.75-229.5-229.5-229.5zm2.605 399.97 17.502 17.502c5.858 5.858 5.858 15.355 0 21.213-5.857 5.858-15.355 5.859-21.213 0l-41.9-41.899c-5.858-5.858-5.858-15.355 0-21.213 5.032-5.032 35.134-35.134 41.9-41.899 5.857-5.858 15.355-5.858 21.213 0s5.858 15.355 0 21.213l-15.015 15.015c75.122-2.692 135.41-64.632 135.41-140.4 0-77.472-63.028-140.5-140.5-140.5s-140.5 63.028-140.5 140.5c0 8.284-6.716 15-15 15s-15-6.716-15-15c0-94.014 76.486-170.5 170.5-170.5s170.5 76.486 170.5 170.5c0 93.143-75.079 169.07-167.9 170.47zm58.395-185.47c8.284 0 15 6.716 15 15s-6.716 15-15 15h-61c-8.284 0-15-6.716-15-15v-87.5c0-8.284 6.716-15 15-15s15 6.716 15 15v72.5h46z"/></g></svg>
         <input id="input" type="text" placeholder="Add new task" />
-        <button onclick="CreateTask()" id="button"  class="add-button">Add</button>
+        <button onclick="CreateTask()" id="button" class="add-button">Add</button>
     </div>
+    <p id="displayTime"></p>
     <ul id="list">
     </ul>
-    <!-- <input type="time" id="timePicker" name="timePicker">
-    <button onclick="showSelectedTime()">Submit</button>
-    <p id="displayTime"></p> -->
 <script src="script.js"></script>
 </body>
 </html>
